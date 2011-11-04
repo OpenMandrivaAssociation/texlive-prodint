@@ -58,6 +58,7 @@ providing this font.
 %doc %{_texmfdistdir}/doc/fonts/prodint/prodint.pfa
 %doc %{_texmfdistdir}/doc/fonts/prodint/prodint.sit.hqx
 %doc %{_texmfdistdir}/doc/fonts/prodint/prodint.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -68,3 +69,5 @@ providing this font.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
