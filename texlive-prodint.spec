@@ -59,3 +59,17 @@ providing this font.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20110330-2
++ Revision: 755070
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20110330-1
++ Revision: 719304
+- texlive-prodint
+- texlive-prodint
+- texlive-prodint
+- texlive-prodint
+
