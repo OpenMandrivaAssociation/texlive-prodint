@@ -1,18 +1,12 @@
-# revision 21893
-# category Package
-# catalog-ctan /fonts/prodint
-# catalog-date 2011-03-30 12:07:52 +0200
-# catalog-license ofl
-# catalog-version undef
 Name:		texlive-prodint
-Version:	20190228
+Version:	21893
 Release:	1
 Summary:	A font that provides the product integral symbol
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/prodint
 License:	OFL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/prodint.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/prodint.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/prodint.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/prodint.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -27,12 +21,12 @@ authors remedied that situation by proposing the symbol and
 providing this font.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -52,24 +46,10 @@ providing this font.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20110330-2
-+ Revision: 755070
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20110330-1
-+ Revision: 719304
-- texlive-prodint
-- texlive-prodint
-- texlive-prodint
-- texlive-prodint
-
