@@ -1,6 +1,6 @@
 Name:		texlive-prodint
 Version:	21893
-Release:	1
+Release:	2
 Summary:	A font that provides the product integral symbol
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/prodint
