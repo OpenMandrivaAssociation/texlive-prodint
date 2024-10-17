@@ -3,7 +3,7 @@ Version:	21893
 Release:	2
 Summary:	A font that provides the product integral symbol
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/prodint
+URL:		https://www.ctan.org/tex-archive/fonts/prodint
 License:	OFL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/prodint.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/prodint.doc.r%{version}.tar.xz
