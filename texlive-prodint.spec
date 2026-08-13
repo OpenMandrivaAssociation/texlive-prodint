@@ -12,7 +12,8 @@ Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/prodint.r%{tl_re
 Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/prodint.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-Provides:	texlive(%{tl_name}) = %{tl_revision}
+Requires:	texlive-tlpkg
+Provides:	texlive(%{tl_name}) = %{version}
 
 %description
 Product integrals are to products, as integrals are to sums. They have
@@ -21,3 +22,10 @@ the standard mathematician's toolbox, possibly because no-one invented
 the right mathematical symbol for them. The authors have remedied that
 situation by proposing the symbol and providing this font.
 
+
+%install -a
+mkdir -p %{buildroot}%{_texmf_updmap_d}
+cat > %{buildroot}%{_texmf_updmap_d}/%{tl_name} <<'TL_DROPIN_EOF'
+# from prodint:
+Map prodint.map
+TL_DROPIN_EOF
